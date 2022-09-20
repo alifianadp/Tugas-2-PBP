@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 1,
+        "fields": {
+            "watched":"Yes",
+            "title":"Mencuri Raden Saleh",
+            "rating":8,
+            "release_date":"25 Agustus 2022",
+            "review":"Seru dan lucu"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 2,
+        "fields": {
+            "watched":"Yes",
+            "title":"Jumanji: The Next Level",
+            "rating":6,
+            "release_date":"4 Desember 2019",
+            "review":"Biasa saja bukan hal yang baru"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 3,
+        "fields": {
+            "watched":"Yes",
+            "title":"Extracurricular",
+            "rating":7,
+            "release_date":"29 April 2020",
+            "review":"Seru dan menegangkan"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 4,
+        "fields": {
+            "watched":"Yes",
+            "title":"Sweet Home",
+            "rating":9,
+            "release_date":"18 Desember 2020",
+            "review":"Seru dan menegangkan"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 5,
+        "fields": {
+            "watched":"Yes",
+            "title":"All of Us Are Dead",
+            "rating":8,
+            "release_date":"28 Januari 2022",
+            "review":"Seru dan menegangkan"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 6,
+        "fields": {
+            "watched":"Yes",
+            "title":"Squid Game",
+            "rating":7,
+            "release_date":"17 September 2021",
+            "review":"Seru dan menegangkan"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 7,
+        "fields": {
+            "watched":"Yes",
+            "title":"Hospital Playlist",
+            "rating":9,
+            "release_date":"12 Maret 2020",
+            "review":"Cerita persahabatan yang menyentuh"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 8,
+        "fields": {
+            "watched":"Yes",
+            "title":"Prison Playbook",
+            "rating":8,
+            "release_date":"18 Januari 2018",
+            "review":"Seru dan lucu"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 9,
+        "fields": {
+            "watched":"Yes",
+            "title":"Move to Heaven",
+            "rating":8,
+            "release_date":"14 Mei 2021",
+            "review":"Cerita cukup menyentuh"
+        }
+},
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+            "watched":"Yes",
+            "title":"My Liberation Notes",
+            "rating":8,
+            "release_date":"9 April 2022",
+            "review":"Cerita cukup menyentuh"
+        }
+}
+]
