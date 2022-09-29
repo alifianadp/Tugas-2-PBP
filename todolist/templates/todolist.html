@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>To Do List</h1>
+
+<h5>User: {{ user }}</h5>
+
+<table>
+    <tr>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Change Status</th>
+    <th>Delete Task</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for data in list_todo %}
+      <tr>
+          <th>{{data.date}}</th>
+          <th>{{data.title}}</th>
+          <th>{{data.description}}</th>
+
+          {% if data.is_finished %}
+          <th>Selesai</th>
+          {% else %}
+          <th>Belum Selesai</th>
+          {% endif %}
+
+          <th>
+            <form method="POST" action="{% url 'todolist:change_status' %}">
+              {% csrf_token %} 
+              <input type="hidden" name="id" value="{{ data.id }}">
+              <button type="submit">Ganti Status</button>
+
+            </form>
+          
+          </th>
+
+          <th>
+            <form method="POST" action="{% url 'todolist:delete_task' %}">
+              {% csrf_token %} 
+              <input type="hidden" name="id" value="{{ data.id }}">
+              <button type="submit">Hapus Task</button>
+
+            </form>
+          
+          </th>
+
+      </tr>
+    {% endfor %}
+</table>
+
+<button><a href="{% url 'todolist:add_task' %}">Tambah Task Baru</a></button>
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+{% endblock content %}
