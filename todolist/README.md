@@ -2,11 +2,11 @@
 <p>https://tugas2-catalog-pbp.herokuapp.com/todolist/</p>
 
 ## Pertanyaan
-1. Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
+1. Apa kegunaan {% csrf_token %} pada elemen form? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen form?
    <p>CSRF token berfungsi untuk menghindari malicious attack dengan cara memeriksa kembali token pada setiap request yang masuk.<br>
       Jika tidak ada potongan kode tersebut, maka suatu request ilegal dapat masuk.</p> 
 
-2. Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
+2. Apakah kita dapat membuat elemen form secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat form secara manual.
    <p>Kita dapat membuat elemen form secara manual tanpa menggunakna generator.<br>
       Hal terserbut dilakukan dengan cara membuatnya satu persatu sesuai dengan fields yang ada.<br>
       Pada form, akan digunakan tag input untuk membuat form yang nantinya pada file views.py akan menjalankan method GET.</p>
