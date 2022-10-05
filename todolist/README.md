@@ -70,3 +70,50 @@
     9. Membuat dua akun pengguna dan tiga dummy data menggunakan model Task pada akun masing-masing di situs web Heroku.
     <p>Buka link heroku, kemudian klik buat akun untuk membuat akun.<br>
        Kemudian login menggunakan akun yang telah dibuat dan klik tambah task baru untuk menambahkan dummy data.</p>
+
+## Tugas 5
+1. Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+   Inline CSS : Menerapkan kode CSS di dalam tag HTML 
+   Kelebihan:
+   - Dapat menguji dan melihat perubahan secara lebih mudah
+   - Perbaikan dapat dilakukan dengan cepat
+   - Permintaan HTTP lebih kecil
+   Kekurangan:
+   - Tidak efektif karena perlu penerapan pada setiap tag
+   
+   Internal CSS: Menerapkan kode CSS di dalam bagian halaman
+   Kelebihan:
+   - Hanya dapat diterapkan ke sebuah halaman
+   - Class dan ID dapat diterapkan sebagai internal stylesheet
+   - Tidak memerlukan file lain karena HTML dan CSS berada di file yang sama
+   Kekurangan:
+   - Waktu akses website meningkat
+   - Tidak efisien apabila CSS digunakan ke beberapa file
+   
+   External CSS: Menerapkan kode CSS melalui file tersendiri
+   Kelebihan:
+   - Struktur menjadi lebih rapi dengan ukuran file HTML lebih kecil
+   - File CSS dapat diterapkan ke banyak halaman
+   Kekurangan:
+   - Halaman tidak dapat tampil secara sempurna sampai file CSS selesai dipanggil
+   
+2. Jelaskan tag HTML5 yang kamu ketahui.
+   - `<header>`: menandakan bagian header dari dokumen.
+   - `<body>`: menandakan bagian body dari dokumen.
+   - `<footer>`: menandakan bagian bawah dari dokumen.
+   - `<table>`: menggambarkan tabel data pada dokumen.
+   - `<button>`: membentuk tombol yang dapat ditekan.
+   
+3. Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+   - Tag Selector: selector berdasarkan tag pada html
+   - Class Selector: selector berdasarkan nama class pada tag html
+   - ID Selector: selector berdasarkan id class yang unik pada tag html
+   - Attribute Selector: selector berdasarkan atribut
+   - Universal Selector: selector untuk menyeleksi semua elemen pada scope tertentu
+   
+4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+   - Memberikan background pada header, body, dan footer
+   - Mengubah todo list menjadi card dan menerapkan hover
+   - Kustomisasi halaman seperti button, textfield, dan lain-lain
+   - Menerapkan responsive pada file CSS
+   
