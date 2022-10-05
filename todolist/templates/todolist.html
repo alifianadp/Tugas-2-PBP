@@ -1,57 +1,101 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>To Do List</h1>
+<header>
+  <h1>To Do List</h1>
 
-<h5>User: {{ user }}</h5>
+  <h2>User: {{ user }}</h2>
+</header>
 
-<table>
+<div class="card-deck">
+  {% for data in list_todo %}
+  <div class="card">
+    <div class="card-body">
+      <h3>{{data.title}}</h3>
+      <h6>{{data.description}}</h6>
+
+      {% if data.is_finished %}
+          <p><b>Selesai</b></p>
+      {% else %}
+          <p><b>Belum Selesai</b></p>
+      {% endif %}
+
+      <div class="container-button">
+        <div class="button-ganti-status">
+          <form method="POST" action="{% url 'todolist:change_status' %}">
+            {% csrf_token %} 
+            <input type="hidden" name="id" value="{{ data.id }}">
+            <button type="submit" class="btn btn-warning">Ganti Status</button>
+          </form>
+        </div>
+        
+        <div class="button-hapus-task">
+          <form method="POST" action="{% url 'todolist:delete_task' %}">
+            {% csrf_token %} 
+            <input type="hidden" name="id" value="{{ data.id }}">
+            <button type="submit" class="btn btn-danger">Hapus Task</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-footer">
+      <p class="task-date">{{data.date}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- <table>
     <tr>
-    <th>Date</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Status</th>
-    <th>Change Status</th>
-    <th>Delete Task</th>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Change Status</th>
+      <th>Delete Task</th>
     </tr>
     {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
     {% for data in list_todo %}
-      <tr>
-          <th>{{data.date}}</th>
-          <th>{{data.title}}</th>
-          <th>{{data.description}}</th>
+    <tr>
+        <th>{{data.date}}</th>
+        <th>{{data.title}}</th>
+        <th>{{data.description}}</th>
 
-          {% if data.is_finished %}
-          <th>Selesai</th>
-          {% else %}
-          <th>Belum Selesai</th>
-          {% endif %}
+        {% if data.is_finished %}
+        <th>Selesai</th>
+        {% else %}
+        <th>Belum Selesai</th>
+        {% endif %}
 
-          <th>
-            <form method="POST" action="{% url 'todolist:change_status' %}">
-              {% csrf_token %} 
-              <input type="hidden" name="id" value="{{ data.id }}">
-              <button type="submit">Ganti Status</button>
+        <th>
+          <form method="POST" action="{% url 'todolist:change_status' %}">
+            {% csrf_token %} 
+            <input type="hidden" name="id" value="{{ data.id }}">
+            <button type="submit">Ganti Status</button>
 
-            </form>
-          
-          </th>
+          </form>
+        
+        </th>
 
-          <th>
-            <form method="POST" action="{% url 'todolist:delete_task' %}">
-              {% csrf_token %} 
-              <input type="hidden" name="id" value="{{ data.id }}">
-              <button type="submit">Hapus Task</button>
+        <th>
+          <form method="POST" action="{% url 'todolist:delete_task' %}">
+            {% csrf_token %} 
+            <input type="hidden" name="id" value="{{ data.id }}">
+            <button type="submit">Hapus Task</button>
 
-            </form>
-          
-          </th>
+          </form>
+        
+        </th>
 
-      </tr>
+    </tr>
     {% endfor %}
-</table>
+</table> -->
 
-<button><a href="{% url 'todolist:add_task' %}">Tambah Task Baru</a></button>
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+<footer>
+  <a type="button" class="btn btn-light" href="{% url 'todolist:add_task' %}">Tambah Task Baru</a>
+  <a type="button" class="btn btn-light" href="{% url 'todolist:logout' %}">Logout</a>
+</footer>
 
 {% endblock content %}

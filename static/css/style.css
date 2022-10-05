@@ -1,7 +1,106 @@
-table {
-    border: 0.5px solid;
+.login {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
-th{
-    border: 0.5px solid;
+.login p {
+    padding-top: 10px;
+}
+
+.register {
+    text-align: center;
+}
+
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #ffff;
+    background-color: rgb(136, 166, 255);
+}
+
+body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(218,215,255);
+    background: linear-gradient(90deg, rgba(218,215,255,1) 0%, rgba(172,172,255,1) 35%, rgba(107,230,255,1) 100%);
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color:  rgb(136, 166, 255);
+}
+
+form {
+    padding-top: 20px;
+}
+
+.card-deck {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 300px;
+    height: fit-content;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.button-ganti-status {
+    display: inline-block;
+}
+
+.button-hapus-task {
+    display: inline-block;
+}
+
+.card-body p {
+    font-style: italic;
+}
+
+.add_task {
+    text-align: center;
+    padding-top: 20px;
+}
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+textarea {
+    resize: none;
+    width: 300px;
+    height: 100px;
+}
+
+li {
+    list-style: none;
+}
+
+@media (max-width: 670px) {
+    /* Untuk Smartphone */
+    .card {
+        width: 250px;
+        height: fit-content;
+    }
 }
