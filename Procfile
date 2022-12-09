@@ -1,3 +1,3 @@
 release: sh -c 'python manage.py migrate && python manage.py loaddata initial_catalog_data.json'
 release: sh -c 'python manage.py migrate && python manage.py loaddata initial_mywatchlist_data.json'
-web: python manage.py migrate & python manage.py collectstatic --no-input && gunicorn tugas-2-pbp.wsgi
+web: gunicorn project_django.wsgi --log-file -
